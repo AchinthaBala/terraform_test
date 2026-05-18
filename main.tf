@@ -17,6 +17,7 @@ resource "aws_subnet" "my_private_subnet" {
   tags = {
     Name        = "my-prod-private-subnet"
     Environment = var.environment
+    Team        = "devops"
   }
 }
 
