@@ -1,34 +1,20 @@
-variable "mycidr" {
-  type    = string
-  default = "10.0.0.0/16"
+variable "vpc_cidr_block" {
+  description = "The CIDR block for the VPC"
+  type        = string
+  default     = "10.0.0.0/16"
 }
-
-variable "myreion" {
-  type    = string
-  default = "us-east-1"
+variable "vpc_name" {
+  description = "The name of the VPC"
+  type        = string
+  default     = "my-vpc"
 }
-
-variable "environment" {
-  type    = string
-  default = "production"
+variable "subnet_cidr_block" {
+  description = "The CIDR block for the subnet"
+  type        = string
+  default     = "10.0.1.0/24"
 }
-
-variable "pvt_subnet_cidr" {
-  type    = string
-  default = "10.0.1.0/24"
-}
-
-variable "pvt_subnet_az" {
-  type    = string
-  default = "us-east-1a"
-}
-
-variable "pub_subnet_cidr" {
-  type    = string
-  default = "10.0.2.0/24"
-}
-
-variable "pubt_subnet_az" {
-  type    = string
-  default = "us-east-1b"
+variable "subnet_name" {
+  description = "The name of the subnet"
+  type        = string
+  default     = "my-subnet-private"
 }
